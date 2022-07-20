@@ -1,7 +1,7 @@
 import Name from "./nameInterface";
 
 interface NameProp {
-    names: Name[];
+  names: Name[];
 }
 
 export default NameProp;

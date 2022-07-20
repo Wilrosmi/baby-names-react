@@ -1,9 +1,9 @@
-import Gender from "./genderEnum"
+import Gender from "./genderEnum";
 
 interface Name {
-    "id": number;
-    "name": string;
-    "sex": Gender;
+  id: number;
+  name: string;
+  sex: Gender;
 }
 
 export default Name;
