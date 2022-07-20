@@ -1,4 +1,4 @@
-[
+const names = [
     {
       "id": 0,
       "name": "Zahra",
@@ -855,3 +855,5 @@
       "sex": "f"
     }
   ]
+
+export default names;
