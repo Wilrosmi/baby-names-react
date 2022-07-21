@@ -1,7 +1,7 @@
 interface Name {
   id: number;
   name: string;
-  sex: "f"|"m";
+  sex: "f" | "m";
 }
 
 export default Name;

@@ -5,12 +5,11 @@ import { useState } from "react";
 import searchFilter from "./utils/searchValue";
 
 function App(props: NameProp): JSX.Element {
-  
   const [state, setState] = useState("");
-  
-  return ( 
+
+  return (
     <>
-      <SearchBar state={state} setState={setState}/>
+      <SearchBar state={state} setState={setState} />
       <NameDisplay names={searchFilter(state, props.names)} />
     </>
   );
