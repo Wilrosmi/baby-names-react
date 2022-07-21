@@ -1,8 +1,7 @@
-import names from "../baby-names";
 import Name from "./nameInterface";
 import nameSortAlpha from "./nameSortAlpha";
 
-test("Test if nameSortAlpha correctly sorts alphabetically", () => {
+test("nameSortAlpha correctly sorts alphabetically", () => {
   expect(nameSortAlpha(nameA, nameB)).toBeGreaterThan(0);
   expect(nameSortAlpha(nameC, nameD)).toBeLessThan(0);
   expect(nameSortAlpha(nameE, nameF)).toBeLessThan(0);
