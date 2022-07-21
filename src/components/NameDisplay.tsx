@@ -1,15 +1,14 @@
 import NameProp from "../utils/namePropInt";
-import genderReturn from "../utils/objectGenderReturn";
 
 function NameDisplay(props: NameProp): JSX.Element {
   return (
-    <>
-      {props.names.map((nameObj, index) => (
-        <p key={index} className={genderReturn(nameObj)}>
+    <div id="nameList">
+      {props.names.map((nameObj) => (
+        <p key={nameObj.id} className={nameObj.sex}>
           {nameObj.name}
         </p>
       ))}
-    </>
+    </div>
   );
 }
 

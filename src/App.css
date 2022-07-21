@@ -1,7 +1,26 @@
 .f {
-  color: pink;
+  background-color: #b9f233;
 }
 
 .m {
-  color: blue;
+  background-color: #f5c242;
+}
+
+.f,
+.m {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+#nameList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#search-bar {
+  display: block;
+  margin: 10px auto 10px auto;
+  align-content: center;
 }
