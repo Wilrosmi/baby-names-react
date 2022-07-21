@@ -17,3 +17,10 @@
   flex-flow: row wrap;
   justify-content: center;
 }
+
+#search-bar {
+  display: block;
+  margin: 10px auto 10px auto;
+  align-content: center;
+
+}
