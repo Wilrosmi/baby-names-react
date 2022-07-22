@@ -8,15 +8,15 @@ interface Prop {
 function NameDisplay(props: Prop): JSX.Element {
   return (
     <div id="nameList">
-      {props.nameList.map((nameObj) => {
+      {props.nameList.map((nameArr) => {
         return (
           <button
-            key={nameObj[0].id}
-            className={nameObj[0].sex}
+            key={nameArr[0].id}
+            className={nameArr[0].sex}
             onClick={() => {
               props.setNameList((state) => {
                 for (const arr of state) {
-                  if (arr[0].id === nameObj[0].id) {
+                  if (arr[0].id === nameArr[0].id) {
                     arr[1] = 1;
                   }
                 }
@@ -24,7 +24,7 @@ function NameDisplay(props: Prop): JSX.Element {
               });
             }}
           >
-            {nameObj[0].name}
+            {nameArr[0].name}
           </button>
         );
       })}
