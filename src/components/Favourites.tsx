@@ -5,9 +5,9 @@ interface Prop {
   setNameList: React.Dispatch<React.SetStateAction<[Name, 0 | 1][]>>;
 }
 
-function NameDisplay(props: Prop): JSX.Element {
+function Favourites(props: Prop): JSX.Element {
   return (
-    <div id="nameList">
+    <div id="favList">
       {props.nameList.map((nameObj) => {
         return (
           <button
@@ -17,7 +17,7 @@ function NameDisplay(props: Prop): JSX.Element {
               props.setNameList((state) => {
                 for (const arr of state) {
                   if (arr[0].id === nameObj[0].id) {
-                    arr[1] = 1;
+                    arr[1] = 0;
                   }
                 }
                 return [...state];
@@ -32,4 +32,4 @@ function NameDisplay(props: Prop): JSX.Element {
   );
 }
 
-export default NameDisplay;
+export default Favourites;
