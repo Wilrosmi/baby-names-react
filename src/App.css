@@ -24,3 +24,11 @@
   margin: 10px auto 10px auto;
   align-content: center;
 }
+
+#favList {
+  display: flex;
+  flex-flow: row wrap;
+  height: 50px;
+  margin: 10px auto 10px auto;
+  justify-content: center;
+}
