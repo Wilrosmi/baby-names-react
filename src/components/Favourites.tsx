@@ -6,18 +6,20 @@ interface Prop {
   setNameList: React.Dispatch<React.SetStateAction<[Name, 0 | 1][]>>;
 }
 
-function NameDisplay({ nameList, setNameList }: Prop): JSX.Element {
+function Favourites({ nameList, setNameList }: Prop): JSX.Element {
   return (
-    <div id="nameList">
-      {
+    <div id="favList">
+      {nameList.length === 0 ? (
+        <p>Click on a name in the list to add it to your favourites!</p>
+      ) : (
         <ButtonMap
           nameList={nameList}
           setNameList={setNameList}
-          toChangeTo={1}
+          toChangeTo={0}
         />
-      }
+      )}
     </div>
   );
 }
 
-export default NameDisplay;
+export default Favourites;
