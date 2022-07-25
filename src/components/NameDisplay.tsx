@@ -1,4 +1,5 @@
 import Name from "../utils/nameInterface";
+import update from "../utils/update"
 
 interface Prop {
   nameList: [Name, 0 | 1][];
@@ -15,12 +16,7 @@ function NameDisplay(props: Prop): JSX.Element {
             className={nameArr[0].sex}
             onClick={() => {
               props.setNameList((state) => {
-                for (const arr of state) {
-                  if (arr[0].id === nameArr[0].id) {
-                    arr[1] = 1;
-                  }
-                }
-                return [...state];
+                return update(state, nameArr[0].id, 1)
               });
             }}
           >
