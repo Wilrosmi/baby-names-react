@@ -10,9 +10,7 @@ interface Prop {
 function Favourites({nameList, setNameList}: Prop): JSX.Element {
   return (
    <div id="favList">
-      {
-      <ButtonMap nameList={nameList} setNameList={setNameList} toChangeTo={0} />
-      }
+      {nameList.length === 0 ? <p>Click on a name in the list to add it to your favourites!</p> : <ButtonMap nameList={nameList} setNameList={setNameList} toChangeTo={0} />}
     </div>
   );
 }
