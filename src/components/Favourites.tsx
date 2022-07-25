@@ -1,29 +1,18 @@
 import Name from "../utils/nameInterface";
 import update from "../utils/update"
+import ButtonMap from "./ButtonMap"
 
 interface Prop {
   nameList: [Name, 0 | 1][];
   setNameList: React.Dispatch<React.SetStateAction<[Name, 0 | 1][]>>;
 }
 
-function Favourites(props: Prop): JSX.Element {
+function Favourites({nameList, setNameList}: Prop): JSX.Element {
   return (
-    <div id="favList">
-      {props.nameList.map((nameArr) => {
-        return (
-          <button
-            key={nameArr[0].id}
-            className={nameArr[0].sex}
-            onClick={() => {
-              props.setNameList((state) => {
-                return update(state, nameArr[0].id, 0)
-              });
-            }}
-          >
-            {nameArr[0].name}
-          </button>
-        );
-      })}
+   <div id="favList">
+      {
+      <ButtonMap nameList={nameList} setNameList={setNameList} toChangeTo={0} />
+      }
     </div>
   );
 }

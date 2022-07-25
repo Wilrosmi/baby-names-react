@@ -1,5 +1,4 @@
 import NameDisplay from "./components/NameDisplay";
-import NameProp from "./utils/namePropInt";
 import SearchBar from "./components/SearchBar";
 import { useState } from "react";
 import searchFilter from "./utils/searchValue";
@@ -9,8 +8,12 @@ import Favourites from "./components/Favourites";
 import favSeparator from "./utils/favSeparator";
 import FilterButtons from "./components/FilterButtons";
 
-function App(props: NameProp): JSX.Element {
-  const startingNameList: [Name, 0 | 1][] = props.names.map(startList);
+interface Prop {
+  names: Name[];
+}
+
+function App({names}: Prop): JSX.Element {
+  const startingNameList: [Name, 0 | 1][] = names.map(startList);
 
   const [inputVal, setInputVal] = useState("");
   const [nameList, setNameList] = useState(startingNameList);
