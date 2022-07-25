@@ -4,30 +4,30 @@ interface Prop {
 
 function FilterButtons(props: Prop): JSX.Element {
   return (
-    <div>
+    <div id="radio-buttons">
       <button
-        className="filter-button"
+        className="filter-button a"
         typeof="radio"
         name="filter"
         onClick={() => props.setFilter("a")}
       >
-        A
+        All
       </button>
       <button
-        className="filter-button"
+        className="filter-button m"
         typeof="radio"
         name="filter"
         onClick={() => props.setFilter("m")}
       >
-        M
+        Male
       </button>
       <button
-        className="filter-button"
+        className="filter-button f"
         typeof="radio"
         name="filter"
         onClick={() => props.setFilter("f")}
       >
-        F
+        Female
       </button>
     </div>
   );

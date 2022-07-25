@@ -20,10 +20,12 @@ function App(props: NameProp): JSX.Element {
     <>
       <SearchBar inputVal={inputVal} setInputVal={setInputVal} />
       <FilterButtons setFilter={setFilter} />
+      <hr />
       <Favourites
         nameList={favSeparator(nameList, 1)}
         setNameList={setNameList}
       />
+      <hr />
       <NameDisplay
         nameList={searchFilter(inputVal, filter, favSeparator(nameList, 0))}
         setNameList={setNameList}
