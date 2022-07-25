@@ -12,7 +12,7 @@ interface Prop {
   names: Name[];
 }
 
-function App({names}: Prop): JSX.Element {
+function App({ names }: Prop): JSX.Element {
   const startingNameList: [Name, 0 | 1][] = names.map(startList);
 
   const [inputVal, setInputVal] = useState("");

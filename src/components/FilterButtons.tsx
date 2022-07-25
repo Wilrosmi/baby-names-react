@@ -1,15 +1,15 @@
-import Button from "./Button"
+import Button from "./Button";
 
 interface Prop {
   setFilter: React.Dispatch<React.SetStateAction<"a" | "f" | "m">>;
 }
 
-function FilterButtons({setFilter}: Prop): JSX.Element {
+function FilterButtons({ setFilter }: Prop): JSX.Element {
   return (
     <div id="radio-buttons">
-      <Button  gender={"a"} setFilter={setFilter} word={"All"} />
-      <Button  gender={"m"} setFilter={setFilter} word={"Male"} />
-      <Button  gender={"f"} setFilter={setFilter} word={"Female"} />
+      <Button gender={"a"} setFilter={setFilter} word={"All"} />
+      <Button gender={"m"} setFilter={setFilter} word={"Male"} />
+      <Button gender={"f"} setFilter={setFilter} word={"Female"} />
     </div>
   );
 }
