@@ -5,7 +5,7 @@ import names from "./baby-names";
 import nameSortAlpha from "./utils/nameSortAlpha";
 import "./App.css";
 
-const alphabeticalNames = names.sort(nameSortAlpha);
+const alphabeticalNames = names.sort(nameSortAlpha); // Sort the array alphabetically
 
 ReactDOM.render(
   <React.StrictMode>
