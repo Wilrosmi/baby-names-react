@@ -15,9 +15,9 @@ interface Prop {
 function App({ names }: Prop): JSX.Element {
   const startingNameList: [Name, 0 | 1][] = names.map(startList);
 
-  const [inputVal, setInputVal] = useState("");
-  const [nameList, setNameList] = useState(startingNameList);
-  const [filter, setFilter] = useState<"a" | "m" | "f">("a");
+  const [inputVal, setInputVal] = useState(""); //Controls the search bar
+  const [nameList, setNameList] = useState(startingNameList); //Controls names to be rendered in main and fav lists
+  const [filter, setFilter] = useState<"a" | "m" | "f">("a"); //Controls radio button filters
 
   return (
     <>
@@ -25,12 +25,12 @@ function App({ names }: Prop): JSX.Element {
       <FilterButtons setFilter={setFilter} />
       <hr />
       <Favourites
-        nameList={favSeparator(nameList, 1)}
+        nameList={favSeparator(nameList, 1)} //FavSep only returns names to go into the fav list
         setNameList={setNameList}
       />
       <hr />
       <NameDisplay
-        nameList={searchFilter(inputVal, filter, favSeparator(nameList, 0))}
+        nameList={searchFilter(inputVal, filter, favSeparator(nameList, 0))} //See above, but for main list
         setNameList={setNameList}
       />
     </>
