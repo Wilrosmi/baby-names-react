@@ -1,8 +1,7 @@
 import Name from "./nameInterface";
 
-
 /**
- * 
+ *
  * @param state the list of elements
  * @param iden the element to change, by its ID
  * @param changeTo the new binary value for the element
